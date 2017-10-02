@@ -5,3 +5,7 @@ NOTE: make sure you have node - npm installed.
 
 npm install
 node server.js
+ Or 
+
+ Watch it live here
+ http://young-savannah-84735.herokuapp.com/
