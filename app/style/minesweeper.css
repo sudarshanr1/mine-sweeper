@@ -1,0 +1,129 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+game-level {
+  float: left;
+  max-width: 20%;
+  margin: 0;
+  padding: 1em;
+}
+
+select {
+  width: 100%;
+}
+input {
+  width: 100%;
+  margin-top: 5%;
+}
+
+.main-content {
+  width: 100%;
+  position: relative;
+}
+header {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 10px 0 10px; 
+    height: 50px; 
+}
+td {
+  width: 50px;
+  position: relative;
+}
+img.unlock, img.flag {
+  width: 40px;
+  height: 40px;
+}
+
+img.mine {
+  width: 50px
+}
+mine-sweeper {
+  width: 50%;
+  padding-top: 1em;
+  float: left;
+  margin-left: 10%;
+}
+.digit {
+  font-size: 40px;
+  font-family: monospace;
+  color: #14BAEE;
+}
+
+.flagIndicator {
+  border: 1px solid #14BAEE;
+  border-bottom: none;
+  position: absolute;
+  width: 100%;
+  top: 50px;
+  border-radius: 5px 5px 0 0;
+  color: #14BAEE;
+  background: #F1F1F1;
+  opacity: 0.5;
+}
+
+.lost {
+  box-shadow: inset 0 0 0 25px #E62117;
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.won {
+  box-shadow: inset 0 0 0 25px #14BAEE;
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+timer {
+  margin-top: 10%;
+}
+.circle {
+  border: 1px solid #14BAEE;
+	border-radius: 50%;
+	width: 200px;
+  height: 200px; 
+  text-align: center;
+  margin: 10% 0 0 10%;
+}
+
+.circle div {
+  margin-top: 40%;
+}

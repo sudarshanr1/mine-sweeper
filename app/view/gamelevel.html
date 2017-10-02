@@ -1,0 +1,5 @@
+<h1>Difficulty Level</h1>
+<select ng-options="level.label for level in $ctrl.gameLevels track by level.id" ng-change="$ctrl.setGameLevel(level)" ng-model="level"></select>
+<input type="button" ng-click="$ctrl.resetGame()" value="New Game"></button>
+<h2>Timer</h2>
+<timer></timer>

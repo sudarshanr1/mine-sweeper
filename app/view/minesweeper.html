@@ -1,0 +1,16 @@
+<table border="1">
+    <tr ng-repeat="row in $ctrl.fields.rows">
+        <td ng-repeat="spot in row.spots"  ng-mouseover="!$ctrl.isFlagLimitReached() ? spot.isFlagCovered = false: ''" ng-mouseleave="spot.isFlagCovered = true" ng-click="$ctrl.spotAction(spot)" class="spot">
+           <img ng-src="{{$ctrl.unlockImg}}" class="unlock" ng-if="spot.isCovered" alt="unlock"/>
+           <img ng-src="{{$ctrl.mineImg}}" class="mine" ng-if="!spot.isCovered && spot.content === 'mine'" alt="unlock"/>
+           <img ng-src="{{$ctrl.flagImg}}" class="flag" ng-if="spot.showFlag" alt="unlock"/>
+           <span ng-if="!spot.isCovered && spot.content !== 'mine' && !spot.showFlag" class="digit">{{spot.content}}</span>
+           <div class="flagIndicator" ng-click="$ctrl.setFlag(spot, $event)" ng-if="!spot.isFlagCovered && !spot.neverDisplay">Add flag</div>
+           <div class="flagIndicator" ng-click="$ctrl.removeFlag(spot, $event)" ng-if="!spot.isFlagCovered  && spot.neverDisplay && spot.showFlag">Remove flag</div>
+        </td>
+    </tr>
+</table>
+<div ng-hide="true" class="game-status" ng-if="(!$ctrl.isResetClicked() || !$ctrl.levelChanged()) && $ctrl.isGameOver()">
+    
+</div>
+<!---->
